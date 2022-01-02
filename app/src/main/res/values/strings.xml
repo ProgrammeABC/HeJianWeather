@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">何简天气</string>
+    <string name="todo">TODO</string>
+    <string name="goToButtonText">goto</string>
+    <string name="changeBackgroundText">更改背景图片</string>
+    <string name="pull_to_refresh">下拉可以刷新</string>
+    <string name="release_to_refresh">释放立即刷新</string>
+    <string name="refreshing">正在刷新…</string>
+    <string name="not_updated_yet">暂未更新过</string>
+    <string name="updated_at">上次更新于%1$s前</string>
+    <string name="updated_just_now">刚刚更新</string>
+    <string name="time_error">时间有问题</string>
+    <string name="cityTextViewText">当前城市</string>
+    <string name="temperatureText">-88</string>
+    <string name="CelsiusText">℃</string>
+    <string name="weatherStatusText">晴</string>
+    <string name="day7WeatherStatusText">晴</string>
+    <string name="day7DateText">12月31日|今天</string>
+    <string name="day7TemperatureText">-88℃/88℃</string>
+    <string name="launcherTips">正在检查权限并获取信息......</string>
+    <string name="showCityListText">使用选单选择城市</string>
+    <string name="useBDLocationText">使用定位城市</string>
+    <string name="nowCityText">当前城市：获取中...</string>
+    <string name="SettingPageTitle">设置</string>
+    <string name="SettingCityText">订阅城市</string>
+    <string name="SettingImageText">设置背景</string>
+    <string name="ChangeImageButtonText">切换背景</string>
+    <string name="forcedUpdateButtonText">强制更新图库</string>
+    <string name="about">关于</string>
+</resources>

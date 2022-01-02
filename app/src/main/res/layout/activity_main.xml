@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/FrameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:contentDescription="@string/todo"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg0"
+        android:visibility="visible"
+        tools:ignore="ImageContrastCheck" />
+
+        <cn.edu.lygtc.HeJianWeather.RefreshableView
+            android:id="@+id/refreshable_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            tools:ignore="MissingConstraints">
+
+            <ScrollView
+                android:id="@+id/fullView"
+                android:layout_width="match_parent"
+                android:layout_height="907dp"
+                android:clipToPadding="false"
+                tools:ignore="SpeakableTextPresentCheck">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="400dp">
+
+                    <TextView
+                        android:id="@+id/cityTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cityTextViewText"
+                        android:textSize="24sp"
+                        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.498"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_begin="59dp" />
+
+                    <ImageButton
+                        android:id="@+id/changeCityButton"
+                        android:layout_width="48dp"
+                        android:layout_height="40dp"
+                        android:background="#00FFFFFF"
+                        android:contentDescription="TODO"
+                        android:onClick="GoToSettingPage"
+                        android:tint="#FFFFFF"
+                        app:layout_constraintBottom_toBottomOf="@+id/cityTextView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.957"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/cityTextView"
+                        app:layout_constraintVertical_bias="0.592"
+                        app:srcCompat="@android:drawable/ic_menu_add"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_begin="329dp" />
+
+                    <TextView
+                        android:id="@+id/temperatureTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/temperatureText"
+                        android:textColor="@color/teal_200"
+                        android:textSize="120sp"
+                        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.452"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cityTextView"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <TextView
+                        android:id="@+id/celsiusTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/CelsiusText"
+                        android:textColor="@color/teal_200"
+                        android:textSize="34sp"
+                        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+                        app:layout_constraintStart_toEndOf="@+id/temperatureTextView"
+                        app:layout_constraintTop_toTopOf="@+id/temperatureTextView"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <ImageView
+                        android:id="@+id/weatherStatusImageView"
+                        android:layout_width="30dp"
+                        android:layout_height="27dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.469"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/temperatureTextView"
+                        app:srcCompat="@drawable/vd_100" />
+
+                    <TextView
+                        android:id="@+id/weatherStatusTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="1dp"
+                        android:text="@string/weatherStatusText"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/weatherStatusImageView"
+                        app:layout_constraintStart_toEndOf="@+id/weatherStatusImageView"
+                        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/day7RecyclerView"
+                        android:layout_width="409dp"
+                        android:layout_height="438dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/guideline10" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.50" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+
+        </cn.edu.lygtc.HeJianWeather.RefreshableView>
+
+
+</FrameLayout>
