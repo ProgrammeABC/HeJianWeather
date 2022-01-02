@@ -8,7 +8,7 @@
 - [qweather](https://www.qweather.com/)
  <img src="https://cdn.qweather.com/media/logo-h-dark-120.png" width="120" height="30" alt="数据来自和风天气" />
 - 百度地图
-- [baidumao](https://map.baidu.com/)
+- [BaiDuMap](https://map.baidu.com/)
 
 ## License
 
